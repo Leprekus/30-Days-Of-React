@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gay</title>
+</head>
+<body>
+    <div class="root"></div>
+
+    <!-- React CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <!-- React CDN -->
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // our code goes here
+    const root = document.querySelector('.root')
+    const title = <h1>My name Is Gae I React</h1>
+    const header = (
+        <header
+        style={{backgroundColor: 'orange', padding: '2rem'}}
+        >
+            <h1>Title</h1>
+            <h3>Subtitles are cool to fill page out</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aliquid cupiditate ipsa optio libero provident nam commodi cum, eligendi maxime molestias amet at, quidem iusto. Molestias quis placeat repudiandae sapiente!</p>
+            <ul>
+            <li>Some</li>
+            <li>Bullet</li>
+            <li>Points</li>
+            </ul>
+            </header>
+    )
+
+    const main = (
+        <main>
+            <h4>Frontend Programming Languages</h4>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+            </ol>    
+        </main>
+    )
+
+    const footer = (
+        <footer>
+            <p>Copyright 2022</p>
+        </footer>
+    )
+
+    const app = (
+        <div>
+        {header}
+        {main}
+        {footer}
+        </div>
+    )
+
+    const test = [header, main, footer]
+    ReactDOM.render(app, root)
+    
+    // our code goes here
+    
+    </script>
+    
+</body>
+</html>
+
