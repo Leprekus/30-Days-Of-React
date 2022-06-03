@@ -25,10 +25,26 @@
       // our code goes here
     const root = document.querySelector('.root')
     const title = <h1>My name Is Gae I React</h1>
+
+    const headerStyle = {
+        backgroundColor: '#C8A2C8',
+        color: '#fbd2e4',
+        padding: '2rem'
+    } 
+
+    const mainStyle = {
+        backgroundColor: '#fbd2e4',
+        color: '#C8A2C8',
+        padding: '4rem',
+        margin: '10px 0'
+
+    }
+    const someText = 'lorem ipsum dorma game of thrones kakoi desu ne waku waku'
+    const sampleArr = ['This', 'is', 'some', 'text', 'stored', 'in', 'an', 'array']
+    const sampleArrFormatted = sampleArr.map(i => <li key={i}>{i}</li>)
+
     const header = (
-        <header
-        style={{backgroundColor: 'orange', padding: '2rem'}}
-        >
+        <header style={headerStyle}>
             <h1>Title</h1>
             <h3>Subtitles are cool to fill page out</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aliquid cupiditate ipsa optio libero provident nam commodi cum, eligendi maxime molestias amet at, quidem iusto. Molestias quis placeat repudiandae sapiente!</p>
@@ -41,22 +57,32 @@
     )
 
     const main = (
-        <main>
+        <main style={mainStyle}>
             <h4>Frontend Programming Languages</h4>
+           
             <ol>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JS</li>
-            </ol>    
+            </ol>   
+            <p>{someText}</p> 
+            <ul>
+                <li>Array Below looks ugly, it can be
+                    formatted using map</li>
+                <li>{sampleArr}</li> 
+                <li>Formatted Arrary:</li>  
+            </ul>
+            <ul>{sampleArrFormatted}</ul>
         </main>
     )
 
     const footer = (
-        <footer>
+        <footer style={headerStyle}>
             <p>Copyright 2022</p>
         </footer>
     )
 
+    //app can be either parent element or array containing JSX elements
     const app = (
         <div>
         {header}
