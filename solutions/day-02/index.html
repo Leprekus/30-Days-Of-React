@@ -43,9 +43,10 @@
     const sampleArr = ['This', 'is', 'some', 'text', 'stored', 'in', 'an', 'array']
     const sampleArrFormatted = sampleArr.map(i => <li key={i}>{i}</li>)
 
+    const visitor = prompt('Please type your Name:');
     const header = (
         <header style={headerStyle}>
-            <h1>Title</h1>
+            <h1>Welcome Back {visitor}</h1>
             <h3>Subtitles are cool to fill page out</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aliquid cupiditate ipsa optio libero provident nam commodi cum, eligendi maxime molestias amet at, quidem iusto. Molestias quis placeat repudiandae sapiente!</p>
             <ul>
@@ -54,6 +55,48 @@
             <li>Points</li>
             </ul>
             </header>
+    )
+
+    const standOut = {
+        color:'white'
+    }
+    const myName = <strong>Raul</strong>
+    const aboutMe = [['Full Name: ', 'Raul Rodriguez Castro'],['Country: ', 'Mexico'], ['Title: ', 'Mr.'], ['Gender :', 'Male'], ['Email: ', 'leprekus@yahoo.com'], ['Phone: ', '+524424469476']]
+    const user = aboutMe.map((attribute, index) => index === 0 ? <h1 key ={attribute} style={standOut}>{attribute}</h1> : <p key = {attribute}>{attribute}</p>)
+    const dayTwoQuestions = (
+        <div className="questions">
+            <p>
+            React is a library.
+            A library has methods and other prebuilt objects that establish a workflow. This generally leads to a better time efficiency. <br/> 
+            A single page application is what react does, because it only interacts with "index.html" through the "root" parent element.<br/> 
+            A component is an html element created with JS using JSX and babel. <br/> 
+            React's current version is 16.14.0<br/> 
+            DOM is the virtual copy of a webpage that the browser downloads to represent it to a user. <br/> 
+            React's virtual DOM is the way that React interacts with the DOM through the parent root element.<br/> 
+            A web application has a web application, server, and databse server. 
+            <br/> 
+            <br/> 
+            I chose to learn React because it is the library i first learned about to create webapps<br/> 
+            and because it seems intuitive and quite easy to learn as well as entertaining in comparison  <br/> 
+            to other libraries such as vue.  <br/> 
+            <br/> 
+            Stars, forks and users using the app are measures that can help determine the popularity.  <br/> 
+            React and Vue stand relatively at the same level popularity wise.  <br/> 
+            <br/> 
+            An html element is an object object created by the DOM <br/> 
+            A self closing tag is written with a slash at the end <br/> 
+            <br/> 
+            An html attribute includes type, style, media, etc and gives special properties to the html element.  <br/> 
+            JSX is JS XML which allows to write HTML code in JS. <br/> 
+            Babel is a transpiler that takes JSX code and translates it into JavaScript readable code <br/> 
+            A transpiler is something like babel (described above) <br/> 
+
+            My name stored in 'myName' variable is {myName} <br/>
+            </p>
+            
+            {user}
+            
+        </div>
     )
 
     const main = (
@@ -73,6 +116,8 @@
                 <li>Formatted Arrary:</li>  
             </ul>
             <ul>{sampleArrFormatted}</ul>
+            {dayTwoQuestions}
+
         </main>
     )
 
