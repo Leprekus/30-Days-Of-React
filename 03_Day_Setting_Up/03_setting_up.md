@@ -48,7 +48,7 @@ Node is a JavaScript runtime environment that allows JavaScript to run on the se
 
 If you do not have node, install it. Install [node.js](https://nodejs.org/en/).
 
-![Node download](../images/download_node.png)
+![Node download]JSON.stringify(scrapedData)(../images/download_node.png)
 
 After downloading double click and install
 
